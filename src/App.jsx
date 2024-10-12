@@ -77,22 +77,20 @@ function App() {
   return (
     <div className='flex justify-center items-center flex-col space-y-10 p-5 bg-gray-200 min-h-screen'>
       
-<div className='relative flex flex-col items-center'>
-  {wrong >= 1 && <Head className="relative top-0" />}
-  {wrong >= 2 && <Stomach className="mt-2" />}
-  
-  <div className='flex justify-between items-stretch w-full relative mt-20'>
-    {wrong >= 5 && <LeftHand />}
-    {wrong >= 6 && <RightHand />}
-  </div>
-  
-  <div className='flex justify-between items-stretch w-full absolute mt-56'>
-    {wrong >= 3 && <LeftLeg />}
-    {wrong >= 4 && <RightLeg className="ml-5" />}
-  </div>
-</div>
-
-
+    <div className='relative flex flex-col items-center'>
+      {wrong >= 1 && <Head className="relative top-0" />}
+      {wrong >= 2 && <Stomach className="mt-2" />}
+      
+      <div className='flex justify-between items-stretch w-full relative mt-20'>
+        {wrong >= 5 && <LeftHand />}
+        {wrong >= 6 && <RightHand />}
+      </div>
+      
+      <div className='flex justify-between items-stretch w-full absolute mt-56'>
+        {wrong >= 3 && <LeftLeg />}
+        {wrong >= 4 && <RightLeg className="ml-5" />}
+      </div>
+    </div>
       {won ? (
         <>
           <h1 className='text-3xl font-bold text-green-600'>YOU WON!</h1>
